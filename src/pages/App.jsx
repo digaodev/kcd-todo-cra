@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
 import RemoveIcon from '../assets/icons/remove.svg'
@@ -89,7 +89,7 @@ function App() {
               <p className={`${todo.completed ? 'line-through' : ''} text-gray-100 md:text-purple-800`}> {todo.description}</p>
 
               <button className="" onClick={() => handleRemoveTodo(todo.id)}>
-                <img src={RemoveIcon} alt="Remove Todo" className="h-6 text-red-600" />
+                <img src={RemoveIcon} alt="Remove Todo" className="h-5 w-5 text-red-600" />
               </button>
             </li>
           )

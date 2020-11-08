@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -13,6 +14,7 @@
     "uuid": "^8.3.1"
   },
   "scripts": {
+    "build:tailwind:production": "NODE_ENV=production postcss src/tailwind.css -o src/tailwind.output.css",
     "build:tailwind": "postcss src/tailwind.css -o src/tailwind.output.css",
     "watch:tailwind": "postcss -w src/tailwind.css -o src/tailwind.output.css",
     "start": "npm-run-all --parallel watch:tailwind start:react",
